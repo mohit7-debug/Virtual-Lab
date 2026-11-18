@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Lab</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f2f5fb; color: #24324a; }
+    header { background: #2457c5; color: white; padding: 22px; text-align: center; }
+    main { max-width: 850px; margin: 30px auto; padding: 0 18px; }
+    .card { background: white; padding: 20px; margin: 15px 0; border-radius: 12px; box-shadow: 0 2px 8px #0001; }
+    button { background: #2457c5; color: white; border: 0; padding: 10px 16px; border-radius: 7px; cursor: pointer; }
+    button:hover { background: #17439f; }
+    #result { color: #167348; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🔬 Virtual Lab</h1>
+    <p>Learn and explore experiments online</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Welcome to Virtual Lab</h2>
+      <p>Virtual Lab is an online learning platform where students can understand experiments through instructions and simple simulations.</p>
+    </section>
+
+    <section class="card">
+      <h2>Available Experiments</h2>
+      <h3>1. Ohm's Law – Physics</h3>
+      <p>Learn the relationship between voltage, current and resistance.</p>
+      <button onclick="showResult('Ohm’s Law: Current = Voltage ÷ Resistance. For 10 V and 5 Ω, current is 2 A.')">View Result</button>
+
+      <h3>2. Plant Cell – Biology</h3>
+      <p>Learn about the cell wall, nucleus and chloroplast.</p>
+      <button onclick="showResult('Plant cells contain parts such as the cell wall, nucleus and chloroplasts.')">View Result</button>
+
+      <h3>3. Acid and Base – Chemistry</h3>
+      <p>Learn how indicators help identify acids and bases.</p>
+      <button onclick="showResult('Acids turn blue litmus red. Bases turn red litmus blue.')">View Result</button>
+      <p id="result" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>Benefits</h2>
+      <ul>
+        <li>Learn experiments step by step.</li>
+        <li>Access learning material online.</li>
+        <li>Understand concepts through examples.</li>
+        <li>Practise safely before laboratory activities.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function showResult(message) {
+      document.getElementById('result').textContent = message;
+    }
+  </script>
+</body>
+</html>
